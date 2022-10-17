@@ -20,6 +20,10 @@
 		7FA0AC6828FD151F00611CBB /* PokemonListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6728FD151F00611CBB /* PokemonListController.swift */; };
 		7FA0AC6A28FD153700611CBB /* SavedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6928FD153700611CBB /* SavedListController.swift */; };
 		7FA0AC6C28FD15A300611CBB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6B28FD15A300611CBB /* TabBarItem.swift */; };
+		7FA0AC7B28FD1C9000611CBB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7A28FD1C9000611CBB /* WebService.swift */; };
+		7FA0AC7D28FD1DDF00611CBB /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7C28FD1DDF00611CBB /* PokemonService.swift */; };
+		7FA0AC7F28FD1F2700611CBB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7E28FD1F2700611CBB /* APIManager.swift */; };
+		7FA0AC8128FD215A00611CBB /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC8028FD215A00611CBB /* APIError.swift */; };
 		7FA0AC8428FD21B400611CBB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8328FD21B400611CBB /* RxCocoa */; };
 		7FA0AC8628FD21B400611CBB /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8528FD21B400611CBB /* RxRelay */; };
 		7FA0AC8828FD21B400611CBB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8728FD21B400611CBB /* RxSwift */; };
@@ -38,6 +42,10 @@
 		7FA0AC6728FD151F00611CBB /* PokemonListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListController.swift; sourceTree = "<group>"; };
 		7FA0AC6928FD153700611CBB /* SavedListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListController.swift; sourceTree = "<group>"; };
 		7FA0AC6B28FD15A300611CBB /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		7FA0AC7A28FD1C9000611CBB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		7FA0AC7C28FD1DDF00611CBB /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
+		7FA0AC7E28FD1F2700611CBB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		7FA0AC8028FD215A00611CBB /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA0AC7028FD1A3C00611CBB /* App */,
+				7FA0AC7128FD1A8B00611CBB /* Service */,
 				7FA0AC6D28FD19FB00611CBB /* PokemonList */,
 				7FA0AC6E28FD1A1600611CBB /* SavedList */,
 				7FA0AC4F28FD0CCA00611CBB /* Assets.xcassets */,
@@ -113,6 +122,17 @@
 				7FA0AC6B28FD15A300611CBB /* TabBarItem.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		7FA0AC7128FD1A8B00611CBB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7FA0AC7A28FD1C9000611CBB /* WebService.swift */,
+				7FA0AC7C28FD1DDF00611CBB /* PokemonService.swift */,
+				7FA0AC7E28FD1F2700611CBB /* APIManager.swift */,
+				7FA0AC8028FD215A00611CBB /* APIError.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +219,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA0AC7B28FD1C9000611CBB /* WebService.swift in Sources */,
 				7FA0AC4E28FD0CC700611CBB /* PokemonPedia.xcdatamodeld in Sources */,
 				7FA0AC6828FD151F00611CBB /* PokemonListController.swift in Sources */,
 				7FA0AC4428FD0CC700611CBB /* AppDelegate.swift in Sources */,
 				7FA0AC6628FD13C000611CBB /* TabBarType.swift in Sources */,
 				7FA0AC6A28FD153700611CBB /* SavedListController.swift in Sources */,
 				7FA0AC6428FD130300611CBB /* TabBarController.swift in Sources */,
+				7FA0AC7D28FD1DDF00611CBB /* PokemonService.swift in Sources */,
+				7FA0AC7F28FD1F2700611CBB /* APIManager.swift in Sources */,
+				7FA0AC8128FD215A00611CBB /* APIError.swift in Sources */,
 				7FA0AC6C28FD15A300611CBB /* TabBarItem.swift in Sources */,
 				7FA0AC4628FD0CC700611CBB /* SceneDelegate.swift in Sources */,
 			);
