@@ -27,6 +27,7 @@
 		7FA0AC8428FD21B400611CBB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8328FD21B400611CBB /* RxCocoa */; };
 		7FA0AC8628FD21B400611CBB /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8528FD21B400611CBB /* RxRelay */; };
 		7FA0AC8828FD21B400611CBB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8728FD21B400611CBB /* RxSwift */; };
+		7FA0AC8B28FD319900611CBB /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC8A28FD319800611CBB /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7FA0AC7C28FD1DDF00611CBB /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
 		7FA0AC7E28FD1F2700611CBB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7FA0AC8028FD215A00611CBB /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		7FA0AC8A28FD319800611CBB /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				7FA0AC7028FD1A3C00611CBB /* App */,
 				7FA0AC7128FD1A8B00611CBB /* Service */,
+				7FA0AC8928FD318C00611CBB /* Model */,
 				7FA0AC6D28FD19FB00611CBB /* PokemonList */,
 				7FA0AC6E28FD1A1600611CBB /* SavedList */,
 				7FA0AC4F28FD0CCA00611CBB /* Assets.xcassets */,
@@ -133,6 +136,14 @@
 				7FA0AC8028FD215A00611CBB /* APIError.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		7FA0AC8928FD318C00611CBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FA0AC8A28FD319800611CBB /* Pokemon.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 			files = (
 				7FA0AC7B28FD1C9000611CBB /* WebService.swift in Sources */,
 				7FA0AC4E28FD0CC700611CBB /* PokemonPedia.xcdatamodeld in Sources */,
+				7FA0AC8B28FD319900611CBB /* Pokemon.swift in Sources */,
 				7FA0AC6828FD151F00611CBB /* PokemonListController.swift in Sources */,
 				7FA0AC4428FD0CC700611CBB /* AppDelegate.swift in Sources */,
 				7FA0AC6628FD13C000611CBB /* TabBarType.swift in Sources */,
