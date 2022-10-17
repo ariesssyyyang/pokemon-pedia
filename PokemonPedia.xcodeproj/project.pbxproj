@@ -20,6 +20,9 @@
 		7FA0AC6828FD151F00611CBB /* PokemonListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6728FD151F00611CBB /* PokemonListController.swift */; };
 		7FA0AC6A28FD153700611CBB /* SavedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6928FD153700611CBB /* SavedListController.swift */; };
 		7FA0AC6C28FD15A300611CBB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6B28FD15A300611CBB /* TabBarItem.swift */; };
+		7FA0AC8428FD21B400611CBB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8328FD21B400611CBB /* RxCocoa */; };
+		7FA0AC8628FD21B400611CBB /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8528FD21B400611CBB /* RxRelay */; };
+		7FA0AC8828FD21B400611CBB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8728FD21B400611CBB /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +45,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA0AC8828FD21B400611CBB /* RxSwift in Frameworks */,
+				7FA0AC8628FD21B400611CBB /* RxRelay in Frameworks */,
 				7FA0AC5F28FD10AB00611CBB /* Kingfisher in Frameworks */,
 				7FA0AC5C28FD0FD600611CBB /* SnapKit in Frameworks */,
+				7FA0AC8428FD21B400611CBB /* RxCocoa in Frameworks */,
 				7FA0AC6228FD120800611CBB /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +135,9 @@
 				7FA0AC5B28FD0FD600611CBB /* SnapKit */,
 				7FA0AC5E28FD10AB00611CBB /* Kingfisher */,
 				7FA0AC6128FD120800611CBB /* Reusable */,
+				7FA0AC8328FD21B400611CBB /* RxCocoa */,
+				7FA0AC8528FD21B400611CBB /* RxRelay */,
+				7FA0AC8728FD21B400611CBB /* RxSwift */,
 			);
 			productName = PokemonPedia;
 			productReference = 7FA0AC4028FD0CC700611CBB /* PokemonPedia.app */;
@@ -162,6 +171,7 @@
 				7FA0AC5A28FD0FD600611CBB /* XCRemoteSwiftPackageReference "SnapKit" */,
 				7FA0AC5D28FD10AB00611CBB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				7FA0AC6028FD120800611CBB /* XCRemoteSwiftPackageReference "Reusable" */,
+				7FA0AC8228FD21B400611CBB /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 7FA0AC4128FD0CC700611CBB /* Products */;
 			projectDirPath = "";
@@ -434,6 +444,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		7FA0AC8228FD21B400611CBB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -451,6 +469,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7FA0AC6028FD120800611CBB /* XCRemoteSwiftPackageReference "Reusable" */;
 			productName = Reusable;
+		};
+		7FA0AC8328FD21B400611CBB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FA0AC8228FD21B400611CBB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7FA0AC8528FD21B400611CBB /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FA0AC8228FD21B400611CBB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		7FA0AC8728FD21B400611CBB /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FA0AC8228FD21B400611CBB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
