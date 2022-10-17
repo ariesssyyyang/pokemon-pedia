@@ -13,6 +13,9 @@
 		7FA0AC4E28FD0CC700611CBB /* PokemonPedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC4C28FD0CC700611CBB /* PokemonPedia.xcdatamodeld */; };
 		7FA0AC5028FD0CCA00611CBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA0AC4F28FD0CCA00611CBB /* Assets.xcassets */; };
 		7FA0AC5328FD0CCA00611CBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA0AC5128FD0CCA00611CBB /* LaunchScreen.storyboard */; };
+		7FA0AC5C28FD0FD600611CBB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC5B28FD0FD600611CBB /* SnapKit */; };
+		7FA0AC5F28FD10AB00611CBB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC5E28FD10AB00611CBB /* Kingfisher */; };
+		7FA0AC6228FD120800611CBB /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC6128FD120800611CBB /* Reusable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA0AC5F28FD10AB00611CBB /* Kingfisher in Frameworks */,
+				7FA0AC5C28FD0FD600611CBB /* SnapKit in Frameworks */,
+				7FA0AC6228FD120800611CBB /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = PokemonPedia;
+			packageProductDependencies = (
+				7FA0AC5B28FD0FD600611CBB /* SnapKit */,
+				7FA0AC5E28FD10AB00611CBB /* Kingfisher */,
+				7FA0AC6128FD120800611CBB /* Reusable */,
+			);
 			productName = PokemonPedia;
 			productReference = 7FA0AC4028FD0CC700611CBB /* PokemonPedia.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,11 @@
 				Base,
 			);
 			mainGroup = 7FA0AC3728FD0CC600611CBB;
+			packageReferences = (
+				7FA0AC5A28FD0FD600611CBB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7FA0AC5D28FD10AB00611CBB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7FA0AC6028FD120800611CBB /* XCRemoteSwiftPackageReference "Reusable" */,
+			);
 			productRefGroup = 7FA0AC4128FD0CC700611CBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -352,6 +368,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7FA0AC5A28FD0FD600611CBB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7FA0AC5D28FD10AB00611CBB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		7FA0AC6028FD120800611CBB /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:AliSoftware/Reusable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7FA0AC5B28FD0FD600611CBB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FA0AC5A28FD0FD600611CBB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7FA0AC5E28FD10AB00611CBB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FA0AC5D28FD10AB00611CBB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		7FA0AC6128FD120800611CBB /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FA0AC6028FD120800611CBB /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7FA0AC4C28FD0CC700611CBB /* PokemonPedia.xcdatamodeld */ = {
