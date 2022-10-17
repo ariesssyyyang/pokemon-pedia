@@ -70,19 +70,43 @@
 		7FA0AC4228FD0CC700611CBB /* PokemonPedia */ = {
 			isa = PBXGroup;
 			children = (
-				7FA0AC4328FD0CC700611CBB /* AppDelegate.swift */,
-				7FA0AC4528FD0CC700611CBB /* SceneDelegate.swift */,
-				7FA0AC6328FD130300611CBB /* TabBarController.swift */,
-				7FA0AC6528FD13C000611CBB /* TabBarType.swift */,
-				7FA0AC6B28FD15A300611CBB /* TabBarItem.swift */,
-				7FA0AC6728FD151F00611CBB /* PokemonListController.swift */,
-				7FA0AC6928FD153700611CBB /* SavedListController.swift */,
+				7FA0AC7028FD1A3C00611CBB /* App */,
+				7FA0AC6D28FD19FB00611CBB /* PokemonList */,
+				7FA0AC6E28FD1A1600611CBB /* SavedList */,
 				7FA0AC4F28FD0CCA00611CBB /* Assets.xcassets */,
 				7FA0AC5128FD0CCA00611CBB /* LaunchScreen.storyboard */,
 				7FA0AC5428FD0CCA00611CBB /* Info.plist */,
 				7FA0AC4C28FD0CC700611CBB /* PokemonPedia.xcdatamodeld */,
 			);
 			path = PokemonPedia;
+			sourceTree = "<group>";
+		};
+		7FA0AC6D28FD19FB00611CBB /* PokemonList */ = {
+			isa = PBXGroup;
+			children = (
+				7FA0AC6728FD151F00611CBB /* PokemonListController.swift */,
+			);
+			path = PokemonList;
+			sourceTree = "<group>";
+		};
+		7FA0AC6E28FD1A1600611CBB /* SavedList */ = {
+			isa = PBXGroup;
+			children = (
+				7FA0AC6928FD153700611CBB /* SavedListController.swift */,
+			);
+			path = SavedList;
+			sourceTree = "<group>";
+		};
+		7FA0AC7028FD1A3C00611CBB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7FA0AC4328FD0CC700611CBB /* AppDelegate.swift */,
+				7FA0AC4528FD0CC700611CBB /* SceneDelegate.swift */,
+				7FA0AC6328FD130300611CBB /* TabBarController.swift */,
+				7FA0AC6528FD13C000611CBB /* TabBarType.swift */,
+				7FA0AC6B28FD15A300611CBB /* TabBarItem.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
