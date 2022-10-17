@@ -20,6 +20,10 @@
 		7FA0AC6828FD151F00611CBB /* PokemonListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6728FD151F00611CBB /* PokemonListController.swift */; };
 		7FA0AC6A28FD153700611CBB /* SavedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6928FD153700611CBB /* SavedListController.swift */; };
 		7FA0AC6C28FD15A300611CBB /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC6B28FD15A300611CBB /* TabBarItem.swift */; };
+		7FA0AC7328FD1ABA00611CBB /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7228FD1ABA00611CBB /* PokemonRepository.swift */; };
+		7FA0AC7528FD1ACA00611CBB /* PokemonLocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7428FD1ACA00611CBB /* PokemonLocalDataStore.swift */; };
+		7FA0AC7728FD1AD600611CBB /* PokemonRemoteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7628FD1AD600611CBB /* PokemonRemoteDataStore.swift */; };
+		7FA0AC7928FD1AE100611CBB /* PokemonDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7828FD1AE100611CBB /* PokemonDataStore.swift */; };
 		7FA0AC7B28FD1C9000611CBB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7A28FD1C9000611CBB /* WebService.swift */; };
 		7FA0AC7D28FD1DDF00611CBB /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7C28FD1DDF00611CBB /* PokemonService.swift */; };
 		7FA0AC7F28FD1F2700611CBB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC7E28FD1F2700611CBB /* APIManager.swift */; };
@@ -43,6 +47,10 @@
 		7FA0AC6728FD151F00611CBB /* PokemonListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListController.swift; sourceTree = "<group>"; };
 		7FA0AC6928FD153700611CBB /* SavedListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListController.swift; sourceTree = "<group>"; };
 		7FA0AC6B28FD15A300611CBB /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		7FA0AC7228FD1ABA00611CBB /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
+		7FA0AC7428FD1ACA00611CBB /* PokemonLocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonLocalDataStore.swift; sourceTree = "<group>"; };
+		7FA0AC7628FD1AD600611CBB /* PokemonRemoteDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRemoteDataStore.swift; sourceTree = "<group>"; };
+		7FA0AC7828FD1AE100611CBB /* PokemonDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDataStore.swift; sourceTree = "<group>"; };
 		7FA0AC7A28FD1C9000611CBB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		7FA0AC7C28FD1DDF00611CBB /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
 		7FA0AC7E28FD1F2700611CBB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -130,6 +138,10 @@
 		7FA0AC7128FD1A8B00611CBB /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7FA0AC7228FD1ABA00611CBB /* PokemonRepository.swift */,
+				7FA0AC7828FD1AE100611CBB /* PokemonDataStore.swift */,
+				7FA0AC7428FD1ACA00611CBB /* PokemonLocalDataStore.swift */,
+				7FA0AC7628FD1AD600611CBB /* PokemonRemoteDataStore.swift */,
 				7FA0AC7A28FD1C9000611CBB /* WebService.swift */,
 				7FA0AC7C28FD1DDF00611CBB /* PokemonService.swift */,
 				7FA0AC7E28FD1F2700611CBB /* APIManager.swift */,
@@ -232,12 +244,16 @@
 			files = (
 				7FA0AC7B28FD1C9000611CBB /* WebService.swift in Sources */,
 				7FA0AC4E28FD0CC700611CBB /* PokemonPedia.xcdatamodeld in Sources */,
+				7FA0AC7528FD1ACA00611CBB /* PokemonLocalDataStore.swift in Sources */,
 				7FA0AC8B28FD319900611CBB /* Pokemon.swift in Sources */,
 				7FA0AC6828FD151F00611CBB /* PokemonListController.swift in Sources */,
 				7FA0AC4428FD0CC700611CBB /* AppDelegate.swift in Sources */,
 				7FA0AC6628FD13C000611CBB /* TabBarType.swift in Sources */,
 				7FA0AC6A28FD153700611CBB /* SavedListController.swift in Sources */,
+				7FA0AC7328FD1ABA00611CBB /* PokemonRepository.swift in Sources */,
+				7FA0AC7728FD1AD600611CBB /* PokemonRemoteDataStore.swift in Sources */,
 				7FA0AC6428FD130300611CBB /* TabBarController.swift in Sources */,
+				7FA0AC7928FD1AE100611CBB /* PokemonDataStore.swift in Sources */,
 				7FA0AC7D28FD1DDF00611CBB /* PokemonService.swift in Sources */,
 				7FA0AC7F28FD1F2700611CBB /* APIManager.swift in Sources */,
 				7FA0AC8128FD215A00611CBB /* APIError.swift in Sources */,
