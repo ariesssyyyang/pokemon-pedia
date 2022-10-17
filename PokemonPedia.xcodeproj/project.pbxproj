@@ -32,6 +32,8 @@
 		7FA0AC8628FD21B400611CBB /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8528FD21B400611CBB /* RxRelay */; };
 		7FA0AC8828FD21B400611CBB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FA0AC8728FD21B400611CBB /* RxSwift */; };
 		7FA0AC8B28FD319900611CBB /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC8A28FD319800611CBB /* Pokemon.swift */; };
+		7FA0AC8D28FD79BA00611CBB /* PokemonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC8C28FD79BA00611CBB /* PokemonListViewModel.swift */; };
+		7FA0AC8F28FD7B1600611CBB /* PokemonTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC8E28FD7B1600611CBB /* PokemonTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		7FA0AC7E28FD1F2700611CBB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7FA0AC8028FD215A00611CBB /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		7FA0AC8A28FD319800611CBB /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		7FA0AC8C28FD79BA00611CBB /* PokemonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewModel.swift; sourceTree = "<group>"; };
+		7FA0AC8E28FD7B1600611CBB /* PokemonTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				7FA0AC6728FD151F00611CBB /* PokemonListController.swift */,
+				7FA0AC8C28FD79BA00611CBB /* PokemonListViewModel.swift */,
+				7FA0AC8E28FD7B1600611CBB /* PokemonTableCell.swift */,
 			);
 			path = PokemonList;
 			sourceTree = "<group>";
@@ -246,12 +252,14 @@
 				7FA0AC4E28FD0CC700611CBB /* PokemonPedia.xcdatamodeld in Sources */,
 				7FA0AC7528FD1ACA00611CBB /* PokemonLocalDataStore.swift in Sources */,
 				7FA0AC8B28FD319900611CBB /* Pokemon.swift in Sources */,
+				7FA0AC8F28FD7B1600611CBB /* PokemonTableCell.swift in Sources */,
 				7FA0AC6828FD151F00611CBB /* PokemonListController.swift in Sources */,
 				7FA0AC4428FD0CC700611CBB /* AppDelegate.swift in Sources */,
 				7FA0AC6628FD13C000611CBB /* TabBarType.swift in Sources */,
 				7FA0AC6A28FD153700611CBB /* SavedListController.swift in Sources */,
 				7FA0AC7328FD1ABA00611CBB /* PokemonRepository.swift in Sources */,
 				7FA0AC7728FD1AD600611CBB /* PokemonRemoteDataStore.swift in Sources */,
+				7FA0AC8D28FD79BA00611CBB /* PokemonListViewModel.swift in Sources */,
 				7FA0AC6428FD130300611CBB /* TabBarController.swift in Sources */,
 				7FA0AC7928FD1AE100611CBB /* PokemonDataStore.swift in Sources */,
 				7FA0AC7D28FD1DDF00611CBB /* PokemonService.swift in Sources */,
