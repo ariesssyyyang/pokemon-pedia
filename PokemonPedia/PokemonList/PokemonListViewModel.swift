@@ -60,16 +60,24 @@ final class PokemonListViewModel {
 
     private func bind() {
         event.pokemonSaved
-            .withLatestFrom(state.pokemons) { savedName, all in
+            .withLatestFrom(state.pokemons) { [repo] savedName, all in
                 guard let index = all.firstIndex(where: { $0.name == savedName }) else {
                     return all
                 }
 
-                // TODO: Save to local storage
-
                 var pokemons = all
-                pokemons[index].isSaved.toggle()
-                return pokemons
+                let result = pokemons[index].isSaved
+                    ? repo.deletePokemon(PokemonInfo(name: savedName, isSaved: true))
+                    : repo.savePokemon(PokemonInfo(name: savedName, isSaved: false))
+
+                switch result {
+                case .success:
+                    pokemons[index].isSaved.toggle()
+                    return pokemons
+                case .failure(let error):
+                    assertionFailure("Failed to toggle save state. \nError: \(error)")
+                    return all
+                }
             }
             .bind(to: state.pokemons)
             .disposed(by: bag)

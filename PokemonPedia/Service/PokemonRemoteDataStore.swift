@@ -15,4 +15,12 @@ final class PokemonRemoteDataStore: PokemonDataStore {
             .asObservable()
             .map { (response: PokemonListResponse) in response.value }
     }
+
+    func savePokemon(_ pokemon: PokemonInfo) -> Result<PokemonInfo, Error> {
+        .success(pokemon)
+    }
+
+    func deletePokemon(_ pokemon: PokemonInfo) -> Result<PokemonInfo, Error> {
+        .success(pokemon)
+    }
 }

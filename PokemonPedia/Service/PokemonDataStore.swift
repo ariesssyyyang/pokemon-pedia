@@ -10,4 +10,6 @@ import RxSwift
 
 protocol PokemonDataStore {
     func getPokemonList(offset: Int) -> Observable<[PokemonInfo]>
+    func savePokemon(_ pokemon: PokemonInfo) -> Result<PokemonInfo, Error>
+    func deletePokemon(_ pokemon: PokemonInfo) -> Result<PokemonInfo, Error>
 }

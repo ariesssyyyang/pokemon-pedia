@@ -12,8 +12,13 @@ struct PokemonInfo: Decodable {
         case name
     }
 
-    var name: String
+    let name: String
     var isSaved: Bool = false
+
+    init(name: String, isSaved: Bool) {
+        self.name = name
+        self.isSaved = isSaved
+    }
 }
 
 struct PokemonDetail: Decodable {
