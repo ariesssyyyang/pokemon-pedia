@@ -44,4 +44,8 @@ final class PokemonRepository {
     func deletePokemon(_ pokemon: PokemonInfo) -> Result<PokemonInfo, Error> {
         localStore.deletePokemon(pokemon)
     }
+
+    func getPokemonDetail(name: String) -> Observable<PokemonDetail> {
+        remoteStore.getPokemonDetail(name: name)
+    }
 }

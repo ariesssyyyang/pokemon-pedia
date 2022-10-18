@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import SnapKit
+import Kingfisher
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

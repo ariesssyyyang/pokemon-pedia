@@ -58,6 +58,13 @@ final class PokemonListViewModel {
             .disposed(by: bag)
     }
 
+    func pokemon(at indexPath: IndexPath) -> PokemonInfo? {
+        let pokemons = state.pokemons.value
+        let index = indexPath.row
+        guard pokemons.indices.contains(index) else { return nil }
+        return pokemons[index]
+    }
+
     private func bind() {
         // TODO: Refresh
 
@@ -87,15 +94,19 @@ final class PokemonListViewModel {
             .bind(to: state.pokemons)
             .disposed(by: bag)
 
-        NotificationCenter.default.rx.notification(.pokemonUnsaved)
+        Observable
+            .merge(
+                NotificationCenter.default.rx.notification(.pokemonSaved),
+                NotificationCenter.default.rx.notification(.pokemonUnsaved)
+            )
             .withLatestFrom(state.pokemons) { notification, all in
                 guard
-                    let unsavedName = notification.userInfo?["name"] as? String,
-                    let index = all.firstIndex(where: { $0.name == unsavedName })
+                    let name = notification.userInfo?["name"] as? String,
+                    let index = all.firstIndex(where: { $0.name == name })
                 else { return all }
 
                 var pokemons = all
-                pokemons.remove(at: index)
+                pokemons[index].isSaved.toggle()
                 return pokemons
             }
             .bind(to: state.pokemons)

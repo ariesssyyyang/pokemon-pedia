@@ -40,6 +40,14 @@ final class PokemonListController: UIViewController {
             }
             .disposed(by: bag)
 
+        tableView.rx.itemSelected
+            .compactMap { [viewModel] in viewModel.pokemon(at: $0) }
+            .subscribe(with: self, onNext: { `self`, pokemon in
+                let controller = PokemonDetailController(info: pokemon)
+                self.present(controller, animated: true)
+            })
+            .disposed(by: bag)
+
         // TODO: Load more
 
         view.addSubview(tableView)

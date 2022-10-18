@@ -23,4 +23,10 @@ final class PokemonRemoteDataStore: PokemonDataStore {
     func deletePokemon(_ pokemon: PokemonInfo) -> Result<PokemonInfo, Error> {
         .success(pokemon)
     }
+
+    func getPokemonDetail(name: String) -> Observable<PokemonDetail> {
+        APIManager.shared
+            .request(service: PokemonService.detail(name: name))
+            .asObservable()
+    }
 }

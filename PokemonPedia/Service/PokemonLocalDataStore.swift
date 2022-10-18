@@ -64,4 +64,8 @@ final class PokemonLocalDataStore: PokemonDataStore {
             return .failure(error)
         }
     }
+
+    func getPokemonDetail(name: String) -> Observable<PokemonDetail> {
+        .empty()
+    }
 }

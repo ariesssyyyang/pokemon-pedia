@@ -32,12 +32,19 @@ struct PokemonDetail: Decodable {
 
     struct PokemonType: Decodable {
         private enum CodingKeys: String, CodingKey {
-            case name = "type"
-            case order = "slot"
+            case slot, type, name
         }
 
-        let order: Int
+        let slot: Int
         let name: String
+
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            let typeContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .type)
+
+            slot = try container.decode(Int.self, forKey: .slot)
+            name = try typeContainer.decode(String.self, forKey: .name)
+        }
     }
 
     let id: Int

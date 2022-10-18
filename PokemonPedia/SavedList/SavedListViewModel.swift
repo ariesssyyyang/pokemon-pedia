@@ -75,5 +75,26 @@ final class SavedListViewModel {
             }
             .bind(to: state.pokemons)
             .disposed(by: bag)
+
+        NotificationCenter.default.rx.notification(.pokemonUnsaved)
+            .withLatestFrom(state.pokemons) { notification, all in
+                guard
+                    let unsaveName = notification.userInfo?["name"] as? String,
+                    let index = all.firstIndex(where: { $0.name == unsaveName })
+                else { return all }
+
+                var pokemons = all
+                pokemons.remove(at: index)
+                return pokemons
+            }
+            .bind(to: state.pokemons)
+            .disposed(by: bag)
+    }
+
+    func pokemon(at indexPath: IndexPath) -> PokemonInfo? {
+        let pokemons = state.pokemons.value
+        let index = indexPath.row
+        guard pokemons.indices.contains(index) else { return nil }
+        return pokemons[index]
     }
 }
