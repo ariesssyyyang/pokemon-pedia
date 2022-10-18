@@ -40,6 +40,8 @@ final class PokemonListController: UIViewController {
             }
             .disposed(by: bag)
 
+        // TODO: Load more
+
         view.addSubview(tableView)
         tableView.snp.makeConstraints { $0.edges.equalToSuperview() }
     }

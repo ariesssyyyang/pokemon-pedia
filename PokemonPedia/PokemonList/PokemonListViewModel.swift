@@ -59,6 +59,8 @@ final class PokemonListViewModel {
     }
 
     private func bind() {
+        // TODO: Refresh
+
         event.pokemonSaved
             .withLatestFrom(state.pokemons) { [repo] savedName, all in
                 guard let index = all.firstIndex(where: { $0.name == savedName }) else {
@@ -66,18 +68,35 @@ final class PokemonListViewModel {
                 }
 
                 var pokemons = all
-                let result = pokemons[index].isSaved
+                let isSaved = pokemons[index].isSaved
+                let notificationName: Notification.Name = isSaved ? .pokemonUnsaved : .pokemonSaved
+                let result = isSaved
                     ? repo.deletePokemon(PokemonInfo(name: savedName, isSaved: true))
                     : repo.savePokemon(PokemonInfo(name: savedName, isSaved: false))
 
                 switch result {
                 case .success:
                     pokemons[index].isSaved.toggle()
+                    NotificationCenter.default.post(name: notificationName, object: nil, userInfo: ["name": savedName])
                     return pokemons
                 case .failure(let error):
                     assertionFailure("Failed to toggle save state. \nError: \(error)")
                     return all
                 }
+            }
+            .bind(to: state.pokemons)
+            .disposed(by: bag)
+
+        NotificationCenter.default.rx.notification(.pokemonUnsaved)
+            .withLatestFrom(state.pokemons) { notification, all in
+                guard
+                    let unsavedName = notification.userInfo?["name"] as? String,
+                    let index = all.firstIndex(where: { $0.name == unsavedName })
+                else { return all }
+
+                var pokemons = all
+                pokemons.remove(at: index)
+                return pokemons
             }
             .bind(to: state.pokemons)
             .disposed(by: bag)

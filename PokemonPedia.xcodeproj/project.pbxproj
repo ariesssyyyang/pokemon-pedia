@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7F900E8528FEED2800F5ABDA /* PokemonMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F900E8328FEED2800F5ABDA /* PokemonMO+CoreDataClass.swift */; };
 		7F900E8628FEED2800F5ABDA /* PokemonMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F900E8428FEED2800F5ABDA /* PokemonMO+CoreDataProperties.swift */; };
+		7F900E8828FEEF5D00F5ABDA /* SavedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F900E8728FEEF5D00F5ABDA /* SavedListViewModel.swift */; };
+		7F900E8B28FEF32900F5ABDA /* NotificationName+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F900E8A28FEF32900F5ABDA /* NotificationName+Extensions.swift */; };
 		7FA0AC4428FD0CC700611CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC4328FD0CC700611CBB /* AppDelegate.swift */; };
 		7FA0AC4628FD0CC700611CBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC4528FD0CC700611CBB /* SceneDelegate.swift */; };
 		7FA0AC4E28FD0CC700611CBB /* PokemonPedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0AC4C28FD0CC700611CBB /* PokemonPedia.xcdatamodeld */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		7F900E8328FEED2800F5ABDA /* PokemonMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PokemonMO+CoreDataClass.swift"; path = "../PokemonMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7F900E8428FEED2800F5ABDA /* PokemonMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PokemonMO+CoreDataProperties.swift"; path = "../PokemonMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7F900E8728FEEF5D00F5ABDA /* SavedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListViewModel.swift; sourceTree = "<group>"; };
+		7F900E8A28FEF32900F5ABDA /* NotificationName+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extensions.swift"; sourceTree = "<group>"; };
 		7FA0AC4028FD0CC700611CBB /* PokemonPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA0AC4328FD0CC700611CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FA0AC4528FD0CC700611CBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F900E8928FEF31700F5ABDA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F900E8A28FEF32900F5ABDA /* NotificationName+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7FA0AC3728FD0CC600611CBB = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA0AC7028FD1A3C00611CBB /* App */,
+				7F900E8928FEF31700F5ABDA /* Extensions */,
 				7FA0AC7128FD1A8B00611CBB /* Service */,
 				7FA0AC8928FD318C00611CBB /* Model */,
 				7FA0AC6D28FD19FB00611CBB /* PokemonList */,
@@ -131,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				7FA0AC6928FD153700611CBB /* SavedListController.swift */,
+				7F900E8728FEEF5D00F5ABDA /* SavedListViewModel.swift */,
 			);
 			path = SavedList;
 			sourceTree = "<group>";
@@ -258,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FA0AC7B28FD1C9000611CBB /* WebService.swift in Sources */,
+				7F900E8828FEEF5D00F5ABDA /* SavedListViewModel.swift in Sources */,
 				7FA0AC9528FDA59B00611CBB /* LocalStoreError.swift in Sources */,
 				7FA0AC4E28FD0CC700611CBB /* PokemonPedia.xcdatamodeld in Sources */,
 				7FA0AC7528FD1ACA00611CBB /* PokemonLocalDataStore.swift in Sources */,
@@ -277,6 +292,7 @@
 				7FA0AC7D28FD1DDF00611CBB /* PokemonService.swift in Sources */,
 				7FA0AC7F28FD1F2700611CBB /* APIManager.swift in Sources */,
 				7FA0AC8128FD215A00611CBB /* APIError.swift in Sources */,
+				7F900E8B28FEF32900F5ABDA /* NotificationName+Extensions.swift in Sources */,
 				7FA0AC6C28FD15A300611CBB /* TabBarItem.swift in Sources */,
 				7FA0AC4628FD0CC700611CBB /* SceneDelegate.swift in Sources */,
 			);
