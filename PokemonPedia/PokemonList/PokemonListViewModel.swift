@@ -65,6 +65,13 @@ final class PokemonListViewModel {
         return pokemons[index]
     }
 
+    func shouldLoadMore(at indexPath: IndexPath) -> Bool {
+        let index = indexPath.row
+        let pokemons = state.pokemons.value
+        guard pokemons.indices.contains(index), (index == pokemons.count-1) else { return false }
+        return true
+    }
+
     private func bind() {
         // TODO: Refresh
 

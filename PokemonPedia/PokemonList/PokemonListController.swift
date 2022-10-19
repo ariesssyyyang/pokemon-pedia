@@ -40,6 +40,13 @@ final class PokemonListController: UIViewController {
             }
             .disposed(by: bag)
 
+        tableView.rx.willDisplayCell
+            .filter { [viewModel] in viewModel.shouldLoadMore(at: $0.indexPath) }
+            .subscribe(onNext: { [viewModel] _ in
+                viewModel.fetchData(mode: .paging)
+            })
+            .disposed(by: bag)
+
         tableView.rx.itemSelected
             .compactMap { [viewModel] in viewModel.pokemon(at: $0) }
             .subscribe(with: self, onNext: { `self`, pokemon in
