@@ -44,8 +44,6 @@ final class SavedListViewModel {
     }
 
     private func bind() {
-        // TODO: Refresh
-
         event.pokemonUnsaved
             .withLatestFrom(state.pokemons) { [store] unsavedName, all in
                 guard let index = all.firstIndex(where: { $0.name == unsavedName }) else {

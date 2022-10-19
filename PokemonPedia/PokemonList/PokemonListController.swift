@@ -23,9 +23,28 @@ final class PokemonListController: UIViewController {
     private func setupViews() {
         view.backgroundColor = .white
 
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .orange
+
+        refreshControl.rx.controlEvent(.valueChanged)
+            .filter { refreshControl.isRefreshing }
+            .subscribe(onNext: { [viewModel] _ in
+                viewModel.fetchData(mode: .refresh)
+            })
+            .disposed(by: bag)
+
+        viewModel.event.refreshed
+            .observe(on: MainScheduler.instance)
+            .filter { refreshControl.isRefreshing }
+            .delay(.seconds(1), scheduler: MainScheduler.instance)
+            .map { false }
+            .bind(to: refreshControl.rx.isRefreshing)
+            .disposed(by: bag)
+
         let tableView = UITableView()
         tableView.register(cellType: PokemonTableCell.self)
         tableView.separatorStyle = .none
+        tableView.refreshControl = refreshControl
 
         viewModel.state.pokemons
             .observe(on: MainScheduler.instance)
@@ -54,8 +73,6 @@ final class PokemonListController: UIViewController {
                 self.present(controller, animated: true)
             })
             .disposed(by: bag)
-
-        // TODO: Load more
 
         view.addSubview(tableView)
         tableView.snp.makeConstraints { $0.edges.equalToSuperview() }

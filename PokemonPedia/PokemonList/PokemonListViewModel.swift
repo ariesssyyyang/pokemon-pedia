@@ -21,6 +21,7 @@ final class PokemonListViewModel {
 
     struct Event {
         let pokemonSaved = PublishRelay<String>()
+        let refreshed = PublishRelay<Void>()
     }
 
     // MARK: - Properties
@@ -54,6 +55,11 @@ final class PokemonListViewModel {
 
         repo.getPokemonList(offset: offset)
             .map { mode == .refresh ? $0 : (pokemons + $0) }
+            .do(afterNext: { [event] _ in
+                if mode == .refresh {
+                    event.refreshed.accept(())
+                }
+            })
             .bind(to: state.pokemons)
             .disposed(by: bag)
     }
@@ -73,8 +79,6 @@ final class PokemonListViewModel {
     }
 
     private func bind() {
-        // TODO: Refresh
-
         event.pokemonSaved
             .withLatestFrom(state.pokemons) { [repo] savedName, all in
                 guard let index = all.firstIndex(where: { $0.name == savedName }) else {
